@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= movie.title %> </title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+<body>
+    <figure>
+        <img src="/img/logo-DH.png" alt="Logo Digital House">
+    </figure>
+    <h1><%= movie.title %> </h1>    
+    <br>
+    <p>RATING: <%= movie.rating %> </p>
+    <br>
+    <p>AWARDS: <%= movie.awards %> </p>
+    <br>
+    <p>LENGTH: <%= movie.length + ' min'%> </p>
+    <br>
+    <p>RELEASE DATE: <%= movie.release_date %> </p>
+    <br>
+    <p>GENERO: <%= movie.genre.name %> </p>
+    <br>
+    <br>
+    <section>
+        <!--Aquí debe colocar los botones de Modificar - Borrar y Listado de Películas-->
+        <p> <a  class="botonModificar" href="/movies/edit/<%= movie.id %> ">Editar</a>
+        
+            <a class="botonBorrar" href="/movies/delete/<%= movie.id %> ">Borrar</a>
+
+            <a  class="botonVolver" href="/movies">Listado de Películas</a></p>
+   
+    
+    </section>
+
+</body>
+</html>
